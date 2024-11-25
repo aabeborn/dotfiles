@@ -47,7 +47,7 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#Mac-mini-di-Andrea
-    darwinConfigurations."Mac-mini-di-Andrea" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."aabeborn" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
