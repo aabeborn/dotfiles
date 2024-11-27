@@ -1,0 +1,18 @@
+alias flakeu='cd ${HOME}/dotfiles && nix flake update'
+alias flakeb='darwin-rebuild switch --flake ${HOME}/dotfiles'
+alias flakehb='home-manager switch --flake ${HOME}/dotfiles'
+
+alias shell-reload='source ~/.zshrc'
+alias shell-restart='exec zsh -l'
+
+alias ls='eza'
+alias ll='eza -l'
+alias la='eza -la'
+alias tree='eza --tree'
+
+alias gui='gitui'
+alias gc='git commit'
+
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"

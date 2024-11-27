@@ -1,0 +1,12 @@
+[core]
+  editor = nvim
+
+[user]
+  name = aabeborn
+  email = aabeborn@benato.dev
+
+[init]
+  defaultBranch = main
+
+[color]
+  ui = auto

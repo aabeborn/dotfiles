@@ -1,0 +1,40 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3-5-sonnet"
+    },
+    "version": "2"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé"
+  },
+  "auto_update_extensions": {
+    "enabled": true
+  },
+  "auto_install_extensions": {
+    "catppucin": true,
+    "html": true,
+    "docker-compose": true,
+    "dockerfile": true,
+    "toml": true,
+    "nix": true,
+    "lua": true,
+    "svelte": true
+  },
+  "prettier": {
+    "allowed": true
+  }
+}
