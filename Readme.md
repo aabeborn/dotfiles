@@ -47,7 +47,7 @@ flakeu
 - Figma Desktop: [Figma](https://www.figma.com)
 
 ### CLI Tools
-- Prompt: [Starship](https://starship.rs)
+- [Starship](https://starship.rs): A minimal, blazing-fast, and infinitely customizable prompt for any shell. 
 - [Zoxide](https://github.com/ajeetdsouza/zoxide): A faster way to navigate your filesystem (cd replacement).
 - [Bat](http://github.com/sharkdp/bat): A cat(1) clone with wings.
 - [Ripgrep](https://github.com/BurntSushi/ripgrep): A search tool that recursively searches the current directory for a regex pattern..
@@ -67,13 +67,13 @@ flakeu
 
 ### Mac utilities
 - [Sketchybar](https://github.com/FelixKratz/SketchyBar): A status bar for MacOS.
-- [Aerospace](https://github.com/nikitabobko/AeroSpace): A window manager for MacOS.
 - [AltTab](https://alt-tab-macos.netlify.app/): A window switcher for MacOS.
 - [Raycast](https://www.raycast.com/): A command launcher for MacOS.
 - [Mas](https://github.com/mas-cli/mas): A CLI for the Mac App Store.
+- [Rectangle](https://rectangleapp.com/): A window manager for MacOS.
 
 ### UI Apps
-- [Chrome](https://www.google.com/chrome/): A web browser.
+- [Brave](https://brave.com): A privacy-focused browser.
 - [Zen](https://zen-browser.app/welcome): Firefox based browser.
 - [Spotify](https://www.spotify.com): A music streaming service.
 - [Telegram](https://telegram.org): A messaging app.
@@ -81,6 +81,9 @@ flakeu
 - [Discord](https://discord.com): A messaging app.
 - [Notion](https://www.notion.so): A note-taking app.
 - [Amazon Photos](https://www.amazon.com/photos): A photo storage app.
+- [RunCat](https://apps.apple.com/us/app/runcat/id1429033973?mt=12): A cute cat that runs on your desktop.
+- [Dashlane](https://www.dashlane.com): A password manager.
+- [Flow](https://flowapp.info): A Focus application.
 
 ## Next Steps
 - [ ] Define and map keybindings
@@ -97,3 +100,4 @@ flakeu
 ## Tools to try
 - [ ] [Ddgr](https://github.com/jarun/ddgr): DuckDuckGo from the terminal.
 - [ ] [Fz](https://github.com/mrjohannchang/fz.sh): A plugin that seamlessly adds fuzzy search to tab completion.
+- [ ] [Aerospace](https://github.com/nikitabobko/AeroSpace): A window manager for MacOS.

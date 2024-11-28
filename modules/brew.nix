@@ -32,7 +32,7 @@
     # Cask packages
     casks = [
       # Browser
-      "google-chrome"
+      "brave-browser"
       "zen-browser"
       # Programming
       "zed" # IDE
@@ -42,7 +42,8 @@
       "warp" # Terminal
       # System
       "raycast" # Spotlight alternative
-      "nikitabobko/tap/aerospace" # Window tiles manager
+      # "nikitabobko/tap/aerospace" # Window tiles manager
+      "rectangle"
       "alt-tab" # Switch between open tabs and programs
       # Personal
       "spotify"
