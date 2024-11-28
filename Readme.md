@@ -32,7 +32,58 @@ To update the flake inputs
 flakeu
 ```
 
+## Apps and packages available
+
+### Development Apps
+- Terminal:
+  - [Wezterm](https://wezfurlong.org/wezterm) **Default Choice**
+  - [Warp](https://warp.dev)
+- IDE:
+  - [Neovim](https://neovim.io)
+  - [VSCode](https://code.visualstudio.com)
+  - [Zed](https://zed.dev) **Default Choice**
+- Shell: [zsh](https://www.zsh.org)
+- Containers Development: [Podman](https://podman.io)
+- Figma Desktop: [Figma](https://www.figma.com)
+
+### CLI Tools
+- Prompt: [Starship](https://starship.rs)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide): A faster way to navigate your filesystem (cd replacement).
+- [Bat](http://github.com/sharkdp/bat): A cat(1) clone with wings.
+- [Ripgrep](https://github.com/BurntSushi/ripgrep): A search tool that recursively searches the current directory for a regex pattern..
+- [Eza](https://github.com/eza-community/eza): A modern replacement for ls.
+- [Tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer.
+- [GitUI](https://github.com/extrawurst/gitui): A terminal UI for git.
+- [Fnm](https://github.com/Schniz/fnm): A NodeJs version manager.
+- [Bun](https://bun.sh/): A modern Js runtime.
+- [Zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Fish-like autosuggestions for zsh.
+- [Gitmoji](https://gitmoji.dev/): An emoji guide for your commit messages.
+- [Pnpm](https://pnpm.io/): A fast, disk space efficient package manager.
+
+### Fonts (All via nerd-fonts)
+- [Fira Code](https://github.com/tonsky/FiraCode)
+- [JetBrains Mono](https://www.jetbrains.com/lp/mono)
+- [Geist](https://https://vercel.com/font)
+
+### Mac utilities
+- [Sketchybar](https://github.com/FelixKratz/SketchyBar): A status bar for MacOS.
+- [Aerospace](https://github.com/nikitabobko/AeroSpace): A window manager for MacOS.
+- [AltTab](https://alt-tab-macos.netlify.app/): A window switcher for MacOS.
+- [Raycast](https://www.raycast.com/): A command launcher for MacOS.
+- [Mas](https://github.com/mas-cli/mas): A CLI for the Mac App Store.
+
+### UI Apps
+- [Chrome](https://www.google.com/chrome/): A web browser.
+- [Zen](https://zen-browser.app/welcome): Firefox based browser.
+- [Spotify](https://www.spotify.com): A music streaming service.
+- [Telegram](https://telegram.org): A messaging app.
+- [Whatsapp](https://whatsapp.com): A messaging app.
+- [Discord](https://discord.com): A messaging app.
+- [Notion](https://www.notion.so): A note-taking app.
+- [Amazon Photos](https://www.amazon.com/photos): A photo storage app.
+
 ## Next Steps
+- [ ] Define and map keybindings
 - [ ] make it available for intel Macs
 - [ ] Make it available for WLS2 and Linux (without homebrew casks)
 - [ ] Get the user and home path from the system
@@ -41,3 +92,8 @@ flakeu
 - [ ] Configure tmux
 - [ ] Add ghostty
 - [ ] Configure vscode
+
+
+## Tools to try
+- [ ] [Ddgr](https://github.com/jarun/ddgr): DuckDuckGo from the terminal.
+- [ ] [Fz](https://github.com/mrjohannchang/fz.sh): A plugin that seamlessly adds fuzzy search to tab completion.

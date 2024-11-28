@@ -25,6 +25,11 @@ in {
         source = ../git;
         recursive = true;
       };
+      # Bat Configuration
+      ".config/bat" = {
+        source = ../bat;
+        recursive = true;
+      };
       # Tmux Configuration
       # ".config/tmux/tmux.conf".source = ../tmux/tmux.conf;
       # WezTerm Configuration

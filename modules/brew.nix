@@ -51,6 +51,7 @@
       "notion"
       "discord"
       "figma"
+      "amazon-photos"
       # Fonts
       "font-fira-code-nerd-font"
       "font-geist-mono-nerd-font"
@@ -70,10 +71,12 @@
       "gitmoji" # Git commit formatter
       "neovim" # Editor
       "oven-sh/bun/bun" # Node replacement
+      "pnpm" # Node package manager
       "fnm" # Node version handler
       # Macos packages
       "mas" # Handle installation of apps from App Store
       "sketchybar" # Use to change appbar design on MacOs
+      "zsh-autosuggestions" # Zsh plugin for autosuggestions and completions
     ];
 
     # Apps from App Store
