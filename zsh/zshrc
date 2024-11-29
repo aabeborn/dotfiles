@@ -193,6 +193,35 @@ alias .5='cd ../../../../..'
 alias ide="zed ."
 alias v="nvim ."
 
+# Tmux aliases
+# Start a new tmux session
+alias tn='tmux new -s'
+# List existing tmux sessions
+alias tl='tmux list-sessions'
+# Attach to the most recent tmux session
+alias ta='tmux attach'
+# Attach to a specific tmux session
+alias tas='tmux attach -t'
+# Kill a specific tmux session
+alias tk='tmux kill-session -t'
+# Detach from current tmux session
+alias td='tmux detach'
+# Switch between tmux panes (example using vim-like navigation)
+alias tp='tmux select-pane'
+# Split pane horizontally
+alias tph='tmux split-window -h'
+# Split pane vertically
+alias tpv='tmux split-window -v'
+# Reload tmux configuration
+alias tr='tmux source-file ~/.tmux.conf'
+# Create a new window
+alias tw='tmux new-window'
+# Kill current window
+alias tkw='tmux kill-window'
+# List key bindings
+alias tkb='tmux list-keys'
+
+export TMUX_CONFIG_HOME="$HOME/.config/tmux/tmux.conf"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

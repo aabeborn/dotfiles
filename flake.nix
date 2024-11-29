@@ -50,9 +50,15 @@
       url = "github:oven-sh/homebrew-bun";
       flake = false;
     };
+
+    # tmux plugin manager
+    tpm = {
+      url = "github:tmux-plugins/tpm";
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ self, darwin, nixpkgs, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, bun-tap, felixKratz-tap, nikitabobko-tap, home-manager }:
+  outputs = inputs@{ self, darwin, nixpkgs, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, bun-tap, felixKratz-tap, nikitabobko-tap, home-manager, tpm }:
   let
     user = "aabeborn";
     system = "aarch64-darwin";
@@ -61,7 +67,7 @@
     darwinConfigurations.BennPC = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = {
-        inherit (inputs) self nixpkgs homebrew-core homebrew-cask homebrew-bundle bun-tap nikitabobko-tap felixKratz-tap;
+        inherit (inputs) self nixpkgs homebrew-core homebrew-cask homebrew-bundle bun-tap nikitabobko-tap felixKratz-tap tpm;
         inherit user;
         pkgs = import nixpkgs {
           inherit system;
@@ -78,7 +84,9 @@
           users.users.aabeborn.home = "/Users/aabeborn";
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.aabeborn = import ./modules/home.nix;
+          home-manager.users.aabeborn = import ./modules/home.nix {
+            inherit (inputs) nixpkgs lib self home-manager tpm;
+          };
         }
       ];
     };

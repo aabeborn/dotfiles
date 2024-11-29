@@ -20,11 +20,11 @@
     "bun-tap": {
       "flake": false,
       "locked": {
-        "lastModified": 1732583691,
-        "narHash": "sha256-Ps3I2BEvZZEcX2ZKK/aMys32mr8nn7WtzosDMN8Ih9I=",
+        "lastModified": 1732881475,
+        "narHash": "sha256-sZdUpF7VDJMNWzu0KRa/8Ka0icwSrY1qVY/FgA9VWy0=",
         "owner": "oven-sh",
         "repo": "homebrew-bun",
-        "rev": "4f50ed92a2ad858a1e928f1fecd7dd892429d2f2",
+        "rev": "faae010ef30d7762f148d0ec51ffc408d6e7479b",
         "type": "github"
       },
       "original": {
@@ -95,11 +95,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732482255,
-        "narHash": "sha256-GUffLwzawz5WRVfWaWCg78n/HrBJrOG7QadFY6rtV8A=",
+        "lastModified": 1732884235,
+        "narHash": "sha256-r8j6R3nrvwbT1aUp4EPQ1KC7gm0pu9VcV1aNaB+XG6Q=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a9953635d7f34e7358d5189751110f87e3ac17da",
+        "rev": "819f682269f4e002884702b87e445c82840c68f2",
         "type": "github"
       },
       "original": {
@@ -127,11 +127,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1732714548,
-        "narHash": "sha256-ZM63VRVmfKfJ9ChygCCaWm+3ve6d3E81KnhRXqbbBps=",
+        "lastModified": 1732908058,
+        "narHash": "sha256-6UDAyaSc7FvIrsZI8BwSCx37oNbCG0+85nhzzpqXGEk=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "4d0d8b5c295eec97bff3e14b985beb3e8e67f989",
+        "rev": "0d250573d8bb5eb0b218e2ed33e3a65461b50cdf",
         "type": "github"
       },
       "original": {
@@ -143,11 +143,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1732718029,
-        "narHash": "sha256-k7ho8skpUouzRNg0vJ5Xt6ag+1xXKZNwLGXuerGpK0I=",
+        "lastModified": 1732912424,
+        "narHash": "sha256-TLkIXO7BjwtrLasrAeVOe3/poYDKf0cLa0uXBECKwgA=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "42cacc6b8e3588a53793c3df6685b87a62d60cce",
+        "rev": "153942f6221a3cc1da075d79d012102eaa1fdeb9",
         "type": "github"
       },
       "original": {
@@ -159,11 +159,11 @@
     "nikitabobko-tap": {
       "flake": false,
       "locked": {
-        "lastModified": 1728844289,
-        "narHash": "sha256-b2jXF4oEqnV/jeCwqxH422UV8wd26sok4JH06lXPFs0=",
+        "lastModified": 1732751349,
+        "narHash": "sha256-1z50QcndD73WXHuqslPu8jlKA8+JHBQpaYiaLm3Xk10=",
         "owner": "nikitabobko",
         "repo": "homebrew-tap",
-        "rev": "2ef82b750260cabbdb4610b4315dca2a19e76614",
+        "rev": "e31184c8a7ebf626537fa91170622fee1796fe85",
         "type": "github"
       },
       "original": {
@@ -242,11 +242,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1732238832,
-        "narHash": "sha256-sQxuJm8rHY20xq6Ah+GwIUkF95tWjGRd1X8xF+Pkk38=",
+        "lastModified": 1732617236,
+        "narHash": "sha256-PYkz6U0bSEaEB1al7O1XsqVNeSNS+s3NVclJw7YC43w=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8edf06bea5bcbee082df1b7369ff973b91618b8d",
+        "rev": "af51545ec9a44eadf3fe3547610a5cdd882bc34e",
         "type": "github"
       },
       "original": {
@@ -267,7 +267,8 @@
         "homebrew-core": "homebrew-core",
         "nikitabobko-tap": "nikitabobko-tap",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "tpm": "tpm"
       }
     },
     "systems": {
@@ -282,6 +283,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tpm": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677502767,
+        "narHash": "sha256-hW8mfwB8F9ZkTQ72WQp/1fy8KL1IIYMZBtZYIwZdMQc=",
+        "owner": "tmux-plugins",
+        "repo": "tpm",
+        "rev": "99469c4a9b1ccf77fade25842dc7bafbc8ce9946",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tmux-plugins",
+        "repo": "tpm",
         "type": "github"
       }
     }

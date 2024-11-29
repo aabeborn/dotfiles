@@ -1,4 +1,4 @@
-{ config, pkgs, lib, user ? "aabeborn", ... }:
+{ nixpkgs, lib, user ? "aabeborn", tpm, ... }:
 let
   username = "aabeborn";
 in {
@@ -31,7 +31,16 @@ in {
         recursive = true;
       };
       # Tmux Configuration
-      # ".config/tmux/tmux.conf".source = ../tmux/tmux.conf;
+      ".config/tmux" = {
+        source = ../tmux;
+        recursive = true;
+      };
+      ".config/tmux/plugins/tpm" = {
+        source = tpm;
+        recursive = true;
+        executable = true;
+      };
+
       # WezTerm Configuration
       ".wezterm.lua".source = ../wezterm/wezterm.lua;
       # Starship Configuration
