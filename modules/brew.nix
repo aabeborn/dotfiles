@@ -34,6 +34,7 @@
       # Browser
       "brave-browser"
       "zen-browser"
+      "arc"
       # Programming
       "zed" # IDE
       "visual-studio-code" # IDE
@@ -67,6 +68,7 @@
       "tmux" # Terminal multiplexer
       "starship" # Shell prompt
       "gitui" # Git UI tool
+      "awscli" # AWS CLI
       # Development
       "git"
       "gitmoji" # Git commit formatter

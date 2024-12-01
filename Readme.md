@@ -74,6 +74,7 @@ flakeu
 
 ### UI Apps
 - [Brave](https://brave.com): A privacy-focused browser.
+- [Arc](https://arc.net): A chrome based browser.
 - [Zen](https://zen-browser.app/welcome): Firefox based browser.
 - [Spotify](https://www.spotify.com): A music streaming service.
 - [Telegram](https://telegram.org): A messaging app.
