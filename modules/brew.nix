@@ -53,7 +53,6 @@
       "notion"
       "discord"
       "figma"
-      "amazon-photos"
       # Fonts
       "font-fira-code-nerd-font"
       "font-geist-mono-nerd-font"
