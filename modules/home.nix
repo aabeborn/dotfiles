@@ -11,10 +11,10 @@ in {
       # Zsh Configuration
       ".zshrc".source = ../zsh/zshrc;
       # Neovim Configuration (remove nested home.file)
-      # ".config/nvim" = {
-      #   source = ../nvim;
-      #   recursive = true;
-      # };
+      ".config/nvim" = {
+        source = ../nvim;
+        recursive = true;
+      };
       # Zed Ide Configuration
       ".config/zed" = {
         source = ../zed;

@@ -23,10 +23,10 @@
       dock.tilesize = 48;
       dock.persistent-apps = [
         "/Applications/Dashlane.app"
-        "/Applications/Zen Browser.app"
+        "/Applications/Arc.app"
         "/Applications/Spotify.app"
         "/Applications/Zed.app"
-        "/Applications/Wezterm.app"
+        "/Applications/Ghostty.app"
       ];
     };
   };
