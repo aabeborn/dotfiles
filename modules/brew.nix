@@ -68,7 +68,6 @@
       "starship" # Shell prompt
       "webp" # Image converter 
       "gitui" # Git UI tool
-      "awscli" # AWS CLI
       # Development
       "git"
       "gitmoji" # Git commit formatter

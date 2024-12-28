@@ -108,7 +108,6 @@ flakeu
 - [ ] Configure sketchybar
 - [ ] Configure neovim
 - [ ] Configure tmux
-- [ ] Add ghostty
 - [ ] Configure vscode
 
 ## Tools to try
