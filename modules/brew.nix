@@ -3,7 +3,6 @@
 {
   nix-homebrew = {
     inherit user;
-
     enable = true;
     enableRosetta = true;
     autoMigrate = true;
@@ -39,6 +38,7 @@
       "zed" # IDE
       "visual-studio-code" # IDE
       "wezterm" # Terminal
+      "ghostty" # Terminal
       "podman-desktop" # Containers handler
       "warp" # Terminal
       # System
@@ -66,6 +66,7 @@
       "bat" # cat command replacement
       "tmux" # Terminal multiplexer
       "starship" # Shell prompt
+      "webp" # Image converter 
       "gitui" # Git UI tool
       "awscli" # AWS CLI
       # Development

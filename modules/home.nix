@@ -40,6 +40,11 @@ in {
         recursive = true;
         executable = true;
       };
+      # Ghostty Configuration"
+      ".config/ghostty" = {
+        source = ../ghostty;
+        recursive = true;
+      };
 
       # WezTerm Configuration
       ".wezterm.lua".source = ../wezterm/wezterm.lua;
