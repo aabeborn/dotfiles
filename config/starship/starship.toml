@@ -138,6 +138,7 @@ disabled = true
 
 [aws]
 symbol = "  "
+disabled = true
 
 [buf]
 symbol = " "
