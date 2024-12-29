@@ -26,14 +26,13 @@ setup_stow() {
     stow -v -R -t $CONFIG_FOLDER/nvim ./config/nvim
     # Zed configuration 
     stow -v -R -t $CONFIG_FOLDER/zed ./config/zed
-    # Sketchybar configuration
-    stow -v -R -t $CONFIG_FOLDER/sketchybar ./config/sketchybar
 
     if is_macos; then
         ## IDK if this is a good practice but store preferences of some apps here
         stow -v -R -t ~/Library/Preferences ./config/raycast
         stow -v -R -t ~/Library/Preferences ./config/alt-tab
         stow -v -R -t ~/Library/Preferences ./config/rectangle
+        stow -v -R -t ~/Library/Preferences ./config/ice
 
     echo $'Done ✅\n'
 }

@@ -66,10 +66,10 @@ install_brew_macos_packages() {
     # Runcat
     osascript -e 'tell application "System Events" to make login item at end with properties {name:"Runcat", path:"/Applications/Runcat.app", hidden:false}'
     osascript -e 'tell application "System Events" to make login item at end with properties {name:"Unsplash Wallpapers", path:"/Applications/Unsplash Wallpapers.app", hidden:false}'
-    brew services start sketchybar
     brew services start alt-tab
     brew services start raycast
     brew services start rectangle
+    brew services start ice
 
     echo $'Done ✅\n'
 }

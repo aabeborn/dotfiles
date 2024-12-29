@@ -22,8 +22,8 @@ cask 'figma' # Design tool
 cask 'notion' # Notes app
 cask 'notion-calendar' # Calendar app
 cask 'readdle-spark' # Email client
-cask 'sketchybar' # Status bar customizer
 cask 'chatgpt' # Chatgpt
+brew jordanbaird-ice # Menu bar customizer
 
 # Fonts
 cask 'font-fira-code-nerd-font'

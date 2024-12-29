@@ -74,11 +74,11 @@ chmod 777 ./scripts/*
 
 ### Mac utilities
 
-- [Sketchybar](https://github.com/FelixKratz/SketchyBar): A status bar for MacOS.
 - [AltTab](https://alt-tab-macos.netlify.app/): A window switcher for MacOS.
 - [Raycast](https://www.raycast.com/): A command launcher for MacOS.
 - [Mas](https://github.com/mas-cli/mas): A CLI for the Mac App Store.
 - [Rectangle](https://rectangleapp.com/): A window manager for MacOS.
+- [Ice](https://github.com/jordanbaird/Ice): A powerful menu bar management tool.
 
 ### UI Apps
 
@@ -99,7 +99,6 @@ chmod 777 ./scripts/*
 
 - [ ] Define and map keybindings
 - [ ] Make it available for WLS2 and Linux (without homebrew casks)
-- [ ] Configure sketchybar
 - [ ] Configure neovim
 - [ ] Configure vscode
 
