@@ -1,7 +1,7 @@
-# Nix aliases
-alias flakeu='cd ${HOME}/dotfiles && nix flake update'
-alias flakeb='darwin-rebuild switch --flake ${HOME}/dotfiles'
-alias flakehb='home-manager switch --flake ${HOME}/dotfiles'
+# Env Variables
+export DOTFILES="$HOME/dev/dotfiles"
+export TMUX_CONFIG_HOME="$HOME/.config/tmux/tmux.conf"
+export GIT_CONFIG="$HOME/.config/git/config"
 
 # Shell aliases
 alias shell-reload='source ~/.zshrc'
@@ -31,12 +31,12 @@ alias lg='eza -lbGF --git'      # Long format with Git status
 alias lgg='eza -lbGF --git --git-ignore'  # Ignore Git-ignored files
 
 # Git aliases
-alias gui='gitui'
+alias gui='lazygit'
 
 # Basic Commands
 alias g='git'
-alias ga='git add'
-alias gaa='git add --all'
+alias ga='git add -p'
+alias gaa='git add --all -p'
 
 # Commit Commands
 alias gc='gitmoji -c'
@@ -100,17 +100,6 @@ alias gclean='git clean -fd'  # Remove untracked files and directories
 # Utility
 alias gignore='git update-index --assume-unchanged'
 alias gunignore='git update-index --no-assume-unchanged'
-
-# Bun Aliases
-alias b='bun'
-alias ba='bun add'
-alias bad='bun add -d'
-alias br='bun run'
-alias bt='bun test'
-alias bx='bunx'
-
-# Node Aliases
-alias n="node"
 
 # PNPM Aliases
 alias pn='pnpm'
@@ -221,9 +210,19 @@ alias tkw='tmux kill-window'
 # List key bindings
 alias tkb='tmux list-keys'
 
-export TMUX_CONFIG_HOME="$HOME/.config/tmux/tmux.conf"
-
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+# Initialize zsh autosuggestion
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Initialize szh completion
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+autoload -Uz compinit
+compinit
+# Initialize zsh syntax highlighting
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Automatically start tmux if not already inside a tmux session
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux
+fi
