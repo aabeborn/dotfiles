@@ -5,48 +5,41 @@ This is my personal pc configuration. It is based on nixos and uses flakes.
 
 ## Features
 
-- Base MacOS configuration (in a declarative way🤩) via `nix-darwin`.
-- Homebrew installation, with all the packages I need, like UI Applications, CLI tools and fonts.
-- Home-manager configuration to setup all needed dotfiles.
+- Base MacOS configuration (in a declarative way🤩).
+- [Homebrew](https://brew.sh/) with all the packages I need, like UI Applications, CLI tools and fonts.
+- [Stow](https://www.gnu.org/software/stow/) as dotfile manager
 
 ## Installation
 
 1. Clone this repository on your $HOME directory.
-2. Install nix via the following command:
+2. Add right permissions to files
 
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+chmod 777 ./scripts/*
 ```
 
-3. Install nix-darwin via the following command:
+3. Run the setup script
 
 ```sh
-nix run nix-darwin -- switch --flake ~/dotfiles
-darwin-rebuild switch --flake ~/dotfiles
+./scripts/setup.sh
 ```
 
 ## Usage
 
-To rebuild the configuration run the following command:
+`setup.sh` is the only and right way to use the repo. it handles different actions:
 
-```sh
-flakeb
-```
-
-To update the flake inputs
-
-```sh
-flakeu
-```
+- `Install`: Setup the pc
+- `Uninstall`: Reset all to base configuration
+- `Reset Mac Preferences`: Reset to default all properties
+- `Refresh dotfiles`: Refresh all dotifles
+- `Update`: update all apps
 
 ## Apps and packages available
 
 ### Development Apps
 
 - Terminal:
-  - [Wezterm](https://wezfurlong.org/wezterm)
-  - [Warp](https://warp.dev)
-  - [Ghostty](https://ghostty.org) **Default Choice**
+  - [Ghostty](https://ghostty.org)
 - IDE:
   - [Neovim](https://neovim.io)
   - [VSCode](https://code.visualstudio.com)
@@ -63,10 +56,13 @@ flakeu
 - [Ripgrep](https://github.com/BurntSushi/ripgrep): A search tool that recursively searches the current directory for a regex pattern..
 - [Eza](https://github.com/eza-community/eza): A modern replacement for ls.
 - [Tmux](https://github.com/tmux/tmux/wiki): A terminal multiplexer.
-- [GitUI](https://github.com/extrawurst/gitui): A terminal UI for git.
+- [LazyGit](https://github.com/jesseduffield/lazygit): A terminal UI for git.
 - [Fnm](https://github.com/Schniz/fnm): A NodeJs version manager.
 - [Bun](https://bun.sh/): A modern Js runtime.
-- [Zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Fish-like autosuggestions for zsh.
+- [Zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Fish-like autosuggestions for Zsh.
+- [Zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Fish shell-like syntax highlighting for Zsh.
+- [Zsh-completions](https://github.com/zsh-users/zsh-completion): Additional completion definitions for Zsh.
+
 - [Gitmoji](https://gitmoji.dev/): An emoji guide for your commit messages.
 - [Pnpm](https://pnpm.io/): A fast, disk space efficient package manager.
 
@@ -86,15 +82,15 @@ flakeu
 
 ### UI Apps
 
-- [Brave](https://brave.com): A privacy-focused browser.
 - [Arc](https://arc.net): A chrome based browser.
 - [Zen](https://zen-browser.app/welcome): Firefox based browser.
 - [Spotify](https://www.spotify.com): A music streaming service.
 - [Telegram](https://telegram.org): A messaging app.
 - [Whatsapp](https://whatsapp.com): A messaging app.
 - [Discord](https://discord.com): A messaging app.
-- [Notion](https://www.notion.so): A note-taking app.
-- [Amazon Photos](https://www.amazon.com/photos): A photo storage app.
+- [Notion](https://www.notion.com): A note-taking app.
+- [Notion Calendar](https://www.notion.com/product/calendar): Calendar application.
+- [Spark](https://sparkmailapp.com/): Mail client applciation.
 - [RunCat](https://apps.apple.com/us/app/runcat/id1429033973?mt=12): A cute cat that runs on your desktop.
 - [Dashlane](https://www.dashlane.com): A password manager.
 - [Flow](https://flowapp.info): A Focus application.
@@ -102,12 +98,9 @@ flakeu
 ## Next Steps
 
 - [ ] Define and map keybindings
-- [ ] make it available for intel Macs
 - [ ] Make it available for WLS2 and Linux (without homebrew casks)
-- [ ] Get the user and home path from the system
 - [ ] Configure sketchybar
 - [ ] Configure neovim
-- [ ] Configure tmux
 - [ ] Configure vscode
 
 ## Tools to try
