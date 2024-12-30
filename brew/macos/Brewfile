@@ -1,5 +1,3 @@
- 
-tap 'homebrew/cask'
 
 # App to install macos apps from store
 brew 'mas'
@@ -23,7 +21,7 @@ cask 'notion' # Notes app
 cask 'notion-calendar' # Calendar app
 cask 'readdle-spark' # Email client
 cask 'chatgpt' # Chatgpt
-brew jordanbaird-ice # Menu bar customizer
+cask 'jordanbaird-ice' # Menu bar customizer
 
 # Fonts
 cask 'font-fira-code-nerd-font'
@@ -31,7 +29,8 @@ cask 'font-geist-mono-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
 
 # App store applications
-mas 1502839586 # HandMirror, used to check your webcam
-mas 1284863847 # Unsplash Wallpapers, dynamic wallpapers
-mas 517914548 # Dashlane, password manager
-mas 1423210932 # Flow, focus timer
+mas 'HandMirror', id: 1502839586 # HandMirror, used to check your webcam
+mas 'Unsplash Wallpapers', id: 1284863847 # Unsplash Wallpapers, dynamic wallpapers
+mas 'Dashlane', id: 517914548 # Dashlane, password manager
+mas 'Flow', id: 1423210932 # Flow, focus timer
+mas 'RunCat', id: 1429033973 # RunCat system resources dashboard
