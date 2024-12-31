@@ -9,7 +9,6 @@ setup_macos() {
     # persistent apps in the docs
     defaults write com.apple.dock persistent-apps -array # Remove all apps
 
-    add_to_dock "/System/Applications/Finder.app" # Finder defaults    
     add_to_dock "/System/Applications/System Settings.app" # System Preferences defaults
     add_to_dock "/Applications/Ghostty.app" # Ghostty Terminal
     add_to_dock "/Applications/Arc.app" # Arc Browser
@@ -17,7 +16,7 @@ setup_macos() {
     add_to_dock "/Applications/Dashlane.app" # Dashlane
     add_to_dock "/Applications/Notion.app" # Notion
     add_to_dock "/Applications/Notion Calendar.app" # Notion Calendar
-    add_to_dock "/Applications/Readdle Spark.app" # Readdle Spark
+    add_to_dock "/Applications/Spark Desktop.app" # Readdle Spark
 
     # Finder defaults
     defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" # Show all file extensions
@@ -70,9 +69,9 @@ setup_macos() {
     sudo pmset -c displaysleep 15    # Display sleep after 10 minutes
     sudo pmset -c disksleep 20       # Disk sleep after 10 minutes
     sudo pmset -c sleep 30           # Computer sleep after 30 minutes
-    sudo pmset -c displaysleep 5     # Display sleep after 10 minutes
-    sudo pmset -c disksleep 10       # Disk sleep after 10 minutes
-    sudo pmset -c sleep 10           # Computer sleep after 30 minutes
+    sudo pmset -b displaysleep 5     # Display sleep after 10 minutes
+    sudo pmset -b disksleep 10       # Disk sleep after 10 minutes
+    sudo pmset -b sleep 10           # Computer sleep after 30 minutes
     sudo pmset -b powernap 0         # Disable Power Nap on battery
     sudo pmset standbydelay 3600    # Standby delay of 1 hour
 
@@ -101,7 +100,6 @@ restore_defaults_preferences() {
     defaults delete com.apple.dock
     defaults delete com.apple.finder
     defaults delete com.apple.symbolichotkeys
-    defaults delete com.apple.symbolichotkeys AppleSymbolicHotKeys
     defaults delete NSGlobalDomain
 
     killall Finder

@@ -1,40 +1,37 @@
 #!/bin/bash
 source './scripts/utils/index.sh'
 
-CONFIG_FOLDER = "${HOME}/.config"
+# Config folder location
+CONFIG_DIR="${HOME}/.config"
 
 setup_stow() {
-    echo "Setup dotfiles using stow🪛🔗 ..."
+    echo "Setting up dotfiles using stow🪛🔗 ..."
 
-    # Check if stow is there
-    check_stow()
+    # Check if 'stow' is installed
+    check_stow
+    # Check if the .config folder exists, create it if not
+    if [ ! -d "$CONFIG_DIR" ]; then
+        mkdir -p $CONFIG_DIR
+    fi
 
-    # Stow links
-    # Zsh configuration 
-    stow -v -R -t $HOME ./config/zsh/.zshrc
-    # Git configuration
-    stow -v -R -t $CONFIG_FOLDER/git ./config/git
-    # Starship configuration
-    stow -v -R -t $CONFIG_FOLDER/starship ./config/starship   
-    # Tmux configuration
-    stow -v -R -t $CONFIG_HOME/tmux ./config/tmux
-    # Ghostty configuration
-    stow -v -R -t $CONFIG_FOLDER/ghostty ./config/ghostty
-    # Bat configuration
-    stow -v -R -t $CONFIG_FOLDER/bat ./config/bat
-    # Neovim configuration
-    stow -v -R -t $CONFIG_FOLDER/nvim ./config/nvim
-    # Zed configuration 
-    stow -v -R -t $CONFIG_FOLDER/zed ./config/zed
+    # Be sure to be in the dotfiles folder
+    cd $1
 
-    if is_macos; then
-        ## IDK if this is a good practice but store preferences of some apps here
-        stow -v -R -t ~/Library/Preferences ./config/raycast
-        stow -v -R -t ~/Library/Preferences ./config/alt-tab
-        stow -v -R -t ~/Library/Preferences ./config/rectangle
-        stow -v -R -t ~/Library/Preferences ./config/ice
+    # Stow configurations
+    stow -v -R --restow --ignore=zsh -t "$CONFIG_DIR" config
+    cd config
+    stow -v -R --restow -t "$HOME" zsh
 
-    echo $'Done ✅\n'
+    # macOS specific configurations (preferences)
+    # if is_macos; then
+    #     echo "Stowing macOS preferences..."
+    #     stow -v -R --adopt -t "$HOME/Library/Preferences"  raycast alt-tab rectangle ice
+    # fi
+
+    # Correct the path
+    cd $1
+
+    echo 'Done ✅'
 }
 
 check_stow() {
@@ -46,14 +43,26 @@ check_stow() {
 }
 
 remove_dotfiles() {
-    echo "Remove dotfiles🗑️🔗 ..."
-    stow -D -t ~ */
-    echo $'Done ✅\n'
+    echo "Removing dotfiles🗑️🔗 ..."
+    # Go to config folder
+    cd $1
+    cd config
+    # Removing all stowed dotfiles
+    stow -D -t "$HOME" zsh
+    stow -D -t "$CONFIG_DIR" *
+
+    # Restore correct path
+    cd $1
+
+    echo 'Done ✅'
 }
 
 refresh_dotfiles() {
-    echo "Refresh dotfiles 🔄🔗 ..."
-    remove_stow
+    echo "Refreshing dotfiles 🔄🔗 ..."
+
+    # Remove existing dotfiles and setup new ones
+    remove_dotfiles
     setup_stow
-    echo $'Done ✅\n'
+
+    echo 'Done ✅'
 }

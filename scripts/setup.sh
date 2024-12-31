@@ -15,10 +15,12 @@ echo $'6 - Exit'
 
 read -p "Enter your choice: " choice
 
+DOTFILES_DIR="$HOME/dev/dotfiles"
+
 case $choice in
     1)
         source ./scripts/install.sh
-        install_programs
+        install $DOTFILES_DIR
 
         echo "That's it, all done! 🌈 Magic"
         echo "Bye bye see'ya! 👋"
@@ -27,7 +29,7 @@ case $choice in
         echo "Hey you lazy guy🖕! Spotted! Take a ☕️ meanwhile I update your apps... "
         source ./scripts/utils/brew.sh
         update_brew
-    
+
         echo "That's it, all done! 🌈 Magic"
         echo "Bye bye see'ya! 👋"
         ;;
