@@ -16,8 +16,10 @@ brew 'gitmoji' # Gitmoji commit messages
 brew 'oven-sh/bun/bun' # Another node replacement
 brew 'zoxide' # Smarter cd command
 brew 'fnm' # Node version manager
+brew 'ripgrep'
 
 # Shell tools
 brew 'zsh-autosuggestions' # Zsh autosuggestions
 brew 'zsh-syntax-highlighting' # Zsh syntax highlighting
 brew 'zsh-completions' # Zsh completions
+brew 'TheZoraiz/ascii-image-converter/ascii-image-converter' # Ascii image converter used in nvim

@@ -1,5 +1,3 @@
 *.local.*
-.git
-.git*
 .
 .DS_Store

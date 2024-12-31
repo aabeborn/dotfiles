@@ -11,15 +11,13 @@ This is my personal pc configuration. It is based on nixos and uses flakes.
 
 ## Installation
 
-1. Clone this repository on your $HOME directory.
+1. Clone this repository on your `$HOME/dev/dotfiles` directory.
 2. Add right permissions to files
-
 ```sh
 chmod 777 ./scripts/*
 ```
 
 3. Run the setup script
-
 ```sh
 ./scripts/setup.sh
 ```
@@ -97,6 +95,7 @@ chmod 777 ./scripts/*
 
 ## Next Steps
 
+- [ ] Export and imports using defaults of mac apps
 - [ ] Define and map keybindings
 - [ ] Make it available for WLS2 and Linux (without homebrew casks)
 - [ ] Configure neovim

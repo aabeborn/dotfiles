@@ -9,12 +9,11 @@ uninstall_programs () {
     remove_dotfiles
     # Remove all homebrew packages and homebrew
     uninstall_brew
-    
+
     if is_macos; then
         # Restore mac os preferences
         restore_defaults_preferences
     fi
 
     echo "❗❗ Restart your system to be sure all changes have taken effect! "
-
 }

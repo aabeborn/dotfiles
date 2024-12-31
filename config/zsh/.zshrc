@@ -2,7 +2,6 @@
 export DOTFILES="$HOME/dev/dotfiles"
 export TMUX_CONFIG_HOME="$HOME/.config/tmux/tmux.conf"
 export GIT_CONFIG="$HOME/.config/git/config"
-
 # Shell aliases
 alias shell-reload='source ~/.zshrc'
 alias shell-restart='exec zsh -l'
