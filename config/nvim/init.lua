@@ -1,3 +1,5 @@
 -- Import lazy plugin manager
-require("config.lazy")
+require("config.keymaps")
 require("config.settings")
+require("config.lazy")
+
