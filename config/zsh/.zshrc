@@ -5,6 +5,8 @@ export GIT_CONFIG="$HOME/.config/git/config"
 # Shell aliases
 alias shell-reload='source ~/.zshrc'
 alias shell-restart='exec zsh -l'
+alias todots='cd $DOTFILES'
+alias vimref="cat $DOTFILES/motions.md"
 
 # Bat aliases
 alias cat='bat'                 # Replace standard cat with bat
