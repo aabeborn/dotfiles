@@ -211,6 +211,9 @@ alias tkw='tmux kill-window'
 # List key bindings
 alias tkb='tmux list-keys'
 
+# Zoxide Aliases
+alias cd="z"
+
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
