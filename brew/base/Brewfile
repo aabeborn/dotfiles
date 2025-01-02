@@ -16,7 +16,8 @@ brew 'gitmoji' # Gitmoji commit messages
 brew 'oven-sh/bun/bun' # Another node replacement
 brew 'zoxide' # Smarter cd command
 brew 'fnm' # Node version manager
-brew 'ripgrep'
+brew 'ripgrep' # Better grep command
+brew 'fzf' # Fuzzy finder
 
 # Shell tools
 brew 'zsh-autosuggestions' # Zsh autosuggestions

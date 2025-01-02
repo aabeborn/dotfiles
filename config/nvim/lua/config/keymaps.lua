@@ -1,40 +1,52 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
+vim.o.mouse = ''
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move block one line down" })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move block one line up" })
+local map = vim.keymap.set
+local opts = { silent = true, noremap = true }
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half page" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up halp page" })
+-- Visual mode mappings
+map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move block one line down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move block one line up" })
 
-vim.keymap.set("n", "n", "nzzzv", { desc = "Center next search result" })
-vim.keymap.set("n", "N", "Nzzzv", { desc = "Center previous search result" })
+-- Navigation
+map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half page" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up half page" })
+map("n", "n", "nzzzv", { desc = "Center next search result" })
+map("n", "N", "Nzzzv", { desc = "Center previous search result" })
 
-vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Exit insert mode" })
+-- Search and Replace
+map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], 
+    { desc = "Start a global search and replace" })
 
-vim.keymap.set(
-	"n",
-	"<leader>s",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ desc = "Start a global search and replace" }
-)
+-- Window Management
+map("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+map("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+map("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
+map("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+map("n", "<C-w>,", ":vertical resize -10<CR>", opts)
+map("n", "<C-w>.", ":vertical resize +10<CR>", opts)
+map("n", "<leader>qq", ":q<CR>", opts)
 
-vim.keymap.set("n", "<leader><leader>", function()
-	vim.cmd("so")
-end, { desc = "Source nvm config" })
+-- Tab Management
+map("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to clipboard" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy current line to clipboard" })
+-- Clipboard Management
+map({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to clipboard" })
+map("n", "<leader>Y", [["+Y]], { desc = "Copy line to clipboard" })
+map({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from clipboard" })
+map({ "n", "v" }, "<leader>P", [["+P]], { desc = "Paste from clipboard before cursor" })
+map({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without copying" })
 
-vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+-- Quick Exit
+map("i", "<C-c>", "<Esc>", { desc = "Exit insert mode" })
 
-vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split view horizontally" })
-vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
-vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
-
-vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+-- Config
+map("n", "<leader><leader>", function()
+    vim.cmd("so")
+end, { desc = "Source nvim config" })
