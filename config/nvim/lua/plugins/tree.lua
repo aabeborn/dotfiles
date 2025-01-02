@@ -1,28 +1,26 @@
 return {
     "nvim-tree/nvim-tree.lua",
-    dependencies = {
-        "nvim-tree/nvim-web-devicons"
-    },
+    event = "VeryLazy",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-        local nvimtree = require("nvim-tree")
-
+        -- disable netrw
         vim.g.loaded_netrw = 1
-        vim.g.loaded_netwrPlugin = 1
+        vim.g.loaded_netrwPlugin = 1
 
-        nvimtree.setup({
+        require("nvim-tree").setup({
             view = {
-                width = 40,
                 relativenumber = true,
                 side = "right",
+                width = 40,
             },
             renderer = {
                 indent_markers = {
-                    enable = true
+                    enable = false,
                 },
                 icons = {
                     show = {
+                        file = false,
                         folder_arrow = true,
-                        file = false
                     },
                     git_placement = "after",
                     glyphs = {
@@ -44,10 +42,7 @@ return {
                 },
             },
             filters = {
-                custom = {
-                    ".DS_Store",
-                    "node_modules",
-                },
+                custom = { ".DS_Store", "node_modules", ".next", ".git", "build", "dist" },
             },
             git = {
                 ignore = false,
@@ -56,8 +51,7 @@ return {
 
         -- Keymaps
         vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-        vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>",
-            { desc = "Toggle file explorer on current file" })
+        vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
         vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
         vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
     end,
