@@ -216,6 +216,7 @@ alias cd="z"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Initialize zsh autosuggestion
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -1,5 +1,3 @@
--- Import lazy plugin manager
-require("config.keymaps")
-require("config.settings")
-require("config.lazy")
+-- Bootstrap lazy.nvim, LazyVim and plugins
 
+require("config.lazy")
