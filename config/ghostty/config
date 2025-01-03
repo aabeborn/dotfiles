@@ -1,5 +1,5 @@
 font-family = "GeistMono Nerd Font"
 font-size = 12
-theme = catppuccin-frappe
+theme = rose-pine-moon
 keybind = alt+left=esc:B
 keybind = alt+right=esc:F
