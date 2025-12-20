@@ -27,13 +27,28 @@ link_file() {
   local src="$1"
   local dest="$2"
 
+  # Destination exists and is NOT a symlink → do nothing
   if [ -e "$dest" ] && [ ! -L "$dest" ]; then
-    log "⏭  Skipping $dest (already exists)"
+    log "⏭  Skipping $dest (already exists, not a symlink)"
     return
   fi
 
+  # Destination is a symlink
+  if [ -L "$dest" ]; then
+    local current
+    current="$(readlink "$dest")"
+
+    if [ "$current" = "$src" ]; then
+      log "✅ Already linked $dest"
+      return
+    else
+      log "🔄 Updating link $dest"
+      action "rm '$dest'"
+    fi
+  fi
+
   mkdir -p "$(dirname "$dest")"
-  action "ln -sf '$src' '$dest'"
+  action "ln -s '$src' '$dest'"
   log "🔗 Linked $dest"
 }
 
@@ -54,6 +69,7 @@ remove_link() {
 SYMLINKS=(
   "config/git|$HOME/.config/git"
   "config/zsh/zshrc|$HOME/.zshrc"
+  "config/zsh|$HOME/.config/zsh"
 )
 
 apply_links() {

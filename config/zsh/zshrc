@@ -19,12 +19,21 @@ export TERM=xterm-256color
 typeset -U path
 path=("$HOME/.local/bin" "/opt/homebrew/bin" $path)
 
+
 # Load layers (if present)
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
 for file in \
-  "$HOME/.config/zsh/tools.zsh" \
-  "$HOME/.config/zsh/aliases.zsh" \
-  "$HOME/.config/zsh/plugins.zsh" \
-  "$HOME/.zshrc.local"
+    "$ZSH_CONFIG_DIR/pure.zsh" \
+    "$HOME/.zshrc.local"
+  # "$HOME/.config/zsh/tools.zsh" \
+  # "$HOME/.config/zsh/aliases.zsh" \
+  # "$HOME/.config/zsh/plugins.zsh" \
 do
   [ -f "$file" ] && source "$file"
 done
+
+
+# ✨ Prompt (Pure via Homebrew)
+autoload -Uz promptinit
+promptinit
+prompt pure
