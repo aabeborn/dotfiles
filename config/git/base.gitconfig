@@ -1,0 +1,26 @@
+# 🧰 Git base configuration
+# Behavior only. No identity. No secrets. 😌
+
+[color]
+	ui = auto
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[init]
+	defaultBranch = main
+
+[commit]
+	verbose = true
+
+# 🧘 Calm defaults
+# Identity, SSH, signing, and credentials are handled elsewhere
