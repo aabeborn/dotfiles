@@ -1,11 +1,15 @@
-# Minimal Makefile
-# The only supported entry point is `make install`
+# 🧰 Dotfiles Makefile
+# Dumb entry points. Scripts do the work. 😌
 
-.PHONY: install commit
+.PHONY: install cleanup commit
 
 install:
-	@echo "🧰 Installing dotfiles (chill mode)"
+	@echo "🚀 Installing dotfiles (chill mode)"
 	@./bootstrap/install.sh
+
+cleanup:
+	@echo "🧹 Cleaning up dotfiles (chill mode)"
+	@./bootstrap/cleanup.sh
 
 commit:
 	@echo "✨ Gitmoji commit"
