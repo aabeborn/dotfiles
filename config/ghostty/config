@@ -1,0 +1,53 @@
+# 👻 Ghostty config
+# Generated. Do not edit manually.
+
+# --------------------------------------------------
+# 🔤 Font
+# --------------------------------------------------
+
+font-family = JetBrains Mono
+font-size = 14
+font-feature = liga
+font-thicken = true
+
+
+# --------------------------------------------------
+# 🧘 UI / Layout
+# --------------------------------------------------
+
+window-padding-x = 10
+window-padding-y = 8
+
+cursor-style = block
+cursor-blink = false
+
+background-opacity = 1.0
+unfocused-opacity = 1.0
+
+
+# --------------------------------------------------
+# ⚡ Performance
+# --------------------------------------------------
+
+scrollback-lines = 10000
+vsync = true
+
+
+# --------------------------------------------------
+# ⌨️ Behavior
+# --------------------------------------------------
+
+copy-on-select = false
+confirm-close-surface = false
+
+
+# --------------------------------------------------
+# 🐚 Shell
+# --------------------------------------------------
+
+shell-integration = zsh
+
+
+# --------------------------------------------------
+# 🎨 Theme (appended below)
+# --------------------------------------------------
