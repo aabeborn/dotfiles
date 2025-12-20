@@ -22,5 +22,12 @@
 [commit]
 	verbose = true
 
+[core]
+  pager = delta
+
+[delta]
+  navigate = true
+  side-by-side = false
+
 # 🧘 Calm defaults
 # Identity, SSH, signing, and credentials are handled elsewhere

@@ -25,6 +25,7 @@ ZSH_CONFIG_DIR="$HOME/.config/zsh"
 for file in \
     "$ZSH_CONFIG_DIR/pure.zsh" \
     "$ZSH_CONFIG_DIR/tools.zsh" \
+    "$ZSH_CONFIG_DIR/plugins.zsh" \
     "$HOME/.zshrc.local"
   # "$HOME/.config/zsh/tools.zsh" \
   # "$HOME/.config/zsh/aliases.zsh" \
