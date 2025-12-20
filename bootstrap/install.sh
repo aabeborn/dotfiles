@@ -26,8 +26,5 @@ log "🖥  Detected OS: $OS"
 log "🔗 Installing symlinks"
 bash "$DOTFILES_DIR/bootstrap/symlink.sh" install
 
-log "👻 Setting up launchd agents"
-"$DOTFILES_DIR/bootstrap/launchd.sh" install
-
 log "✅ Install complete"
 log "🔄 Restart your shell to apply changes"

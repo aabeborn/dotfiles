@@ -71,8 +71,6 @@ SYMLINKS=(
   "config/zsh/zshrc|$HOME/.zshrc"
   "config/zsh|$HOME/.config/zsh"
   "config/ghostty|$HOME/.config/ghostty"
-  # 👻 Ghostty theme sync (launchd)
-  "config/ghostty/ghostty-theme.plist|$HOME/Library/LaunchAgents/com.aabeborn.ghostty.theme.plist"
 )
 
 apply_links() {

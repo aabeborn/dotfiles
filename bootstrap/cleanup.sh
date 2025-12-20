@@ -14,9 +14,6 @@ log() {
 
 [ "$DRY_RUN" -eq 1 ] && log "🧪 Dry-run mode enabled"
 
-log "👻 Cleaning up launchd agents"
-"$DOTFILES_DIR/bootstrap/launchd.sh" cleanup
-
 # 🧹 Symlinks
 log "🧹 Cleaning up symlinks"
 bash "$DOTFILES_DIR/bootstrap/symlink.sh" cleanup

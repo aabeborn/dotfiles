@@ -80,6 +80,8 @@ node_sanity_check() {
 export EDITOR=vim
 export VISUAL=vim
 
+# Sync Ghostty theme with macOS appearance
+~/.config/ghostty/sync-theme.sh ensure-cron >/dev/null 2>&1 &!
 
 autoload -Uz add-zsh-hook
 add-zsh-hook chpwd node_sanity_check
