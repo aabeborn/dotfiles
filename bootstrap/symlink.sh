@@ -71,6 +71,7 @@ SYMLINKS=(
   "config/zsh/zshrc|$HOME/.zshrc"
   "config/zsh|$HOME/.config/zsh"
   "config/ghostty|$HOME/.config/ghostty"
+  "config/zed|$HOME/.config/zed"
 )
 
 apply_links() {
