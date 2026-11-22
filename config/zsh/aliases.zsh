@@ -68,7 +68,7 @@ alias bdoc='brew doctor'
 alias bbun='brew bundle --file "$(dirname "$(dirname "$(readlink ~/.config/zsh)")")/Brewfile"'   # sync from the repo's Brewfile
 
 # 📦 pnpm
-alias pi='pnpm install'
+alias pin='pnpm install'   # not 'pi': that is the pi coding agent
 alias pa='pnpm add'
 alias pr='pnpm run'
 
