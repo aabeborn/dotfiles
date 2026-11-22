@@ -1,0 +1,54 @@
+# 🐚 ~/.zshrc — interactive shell entry point.
+# Order: options → PATH → completion → prompt → layers → local → plugins.
+# Each layer lives in ~/.config/zsh and is optional: a missing file is skipped.
+
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+
+# --------------------------------------------------
+# 🧱 PATH — arrays dedupe themselves; prepend, never export PATH
+# --------------------------------------------------
+typeset -U path PATH fpath
+path=("$HOME/.local/bin" $path)
+
+# --------------------------------------------------
+# 🕰 History
+# --------------------------------------------------
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE
+
+# --------------------------------------------------
+# ✏️ Environment
+# --------------------------------------------------
+export EDITOR="zed --wait"
+export VISUAL="zed --wait"
+
+# --------------------------------------------------
+# ⌨️ Completion — one compinit, after every fpath change
+# --------------------------------------------------
+fpath=("${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh-completions" $fpath)
+
+autoload -Uz compinit
+compinit -d "$HOME/.zcompdump"
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# --------------------------------------------------
+# ✨ Prompt — Pure
+# --------------------------------------------------
+[[ -r "$ZSH_CONFIG_DIR/pure.zsh" ]] && source "$ZSH_CONFIG_DIR/pure.zsh"
+
+# --------------------------------------------------
+# 🧩 Layers
+# --------------------------------------------------
+for layer in tools aliases; do
+  [[ -r "$ZSH_CONFIG_DIR/$layer.zsh" ]] && source "$ZSH_CONFIG_DIR/$layer.zsh"
+done
+
+# Machine-specific overrides. Not versioned.
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
+# Plugins last: syntax highlighting must wrap everything else.
+[[ -r "$ZSH_CONFIG_DIR/plugins.zsh" ]] && source "$ZSH_CONFIG_DIR/plugins.zsh"
