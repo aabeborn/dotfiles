@@ -1,4 +1,4 @@
-# 🧰 Dotfiles (v3)
+# 🧰 Dotfiles
 
 Small, macOS-only dotfiles. Configs are symlinked from this repo into `$HOME`, so editing a file here edits the live config.
 
