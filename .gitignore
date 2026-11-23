@@ -1,1 +1,5 @@
 .DS_Store
+# Real identity, keys and secrets. Only *.example files are versioned.
+config/git-local/*.gitconfig
+config/zsh/env.local
+config/zsh/qonto.zsh

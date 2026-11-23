@@ -22,7 +22,7 @@ fi
 # 📦 pnpm — manages Node too (`pnpm runtime set node <version> -g`).
 # Global bin is $PNPM_HOME/bin. pnpm creates it on first global install and refuses
 # global installs while it is missing from PATH, so it is added unconditionally.
-export PNPM_HOME="$HOME/Library/pnpm"
+export PNPM_HOME="${PNPM_HOME:-$HOME/Library/pnpm}"
 path=("$PNPM_HOME/bin" $path)
 
 # 🥟 Bun — bun and bunx, plus globals installed with `bun add -g`

@@ -1,0 +1,2 @@
+# Qonto-only PATH blocks. Copy to ~/.config/zsh/qonto.zsh on Qonto machines; sourced by zshrc when present.
+path=("$HOME/.edgee/bin" "$HOME/go/bin" $path)

@@ -43,9 +43,12 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # --------------------------------------------------
 # 🧩 Layers
 # --------------------------------------------------
-for layer in tools aliases; do
+for layer in tools aliases qonto; do
   [[ -r "$ZSH_CONFIG_DIR/$layer.zsh" ]] && source "$ZSH_CONFIG_DIR/$layer.zsh"
 done
+
+# Secrets and machine-specific env. Not versioned (see env.local.example).
+[[ -r "$ZSH_CONFIG_DIR/env.local" ]] && source "$ZSH_CONFIG_DIR/env.local"
 
 # Machine-specific overrides. Not versioned.
 [[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

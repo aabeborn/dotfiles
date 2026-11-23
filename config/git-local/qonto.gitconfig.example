@@ -1,0 +1,28 @@
+# Copy to ~/.config/git-local/qonto.gitconfig and fill in. Not versioned with real values.
+[user]
+	name = Andrea Benato
+	email = andrea.benato@qonto.com
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	# Key comes from QONTO_SSH_KEY (env.local). Used only when user.signingkey is unset.
+	defaultKeyCommand = sh -c 'printf %s "$QONTO_SSH_KEY"'
+
+[commit]
+	gpgsign = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential

@@ -1,0 +1,41 @@
+# 🏢 Brewfile.qonto — Qonto work packages. Installed by scripts/install.sh when QONTO=1.
+
+tap "anomalyco/tap"
+tap "bufbuild/buf"
+tap "edgee-ai/tap"
+tap "supabase/tap"
+
+# Cloud, containers, infra
+brew "awscli"
+brew "docker-compose"
+brew "docker-credential-helper-ecr"
+brew "kubernetes-cli"
+brew "supabase/tap/supabase"
+brew "protobuf"
+brew "bufbuild/buf/buf"
+brew "edgee-ai/tap/edgee"
+brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode-v2"
+
+# Languages and toolchains
+brew "go"
+brew "python@3.13"
+brew "rbenv"
+brew "rustup"
+
+# Tooling used by Qonto repos
+brew "bat"
+brew "ffmpeg"
+brew "herdr"
+brew "lazygit"
+brew "curl"
+brew "wget"
+brew "rtk"
+
+# Apps
+cask "1password-cli"
+cask "claude-code@latest"
+cask "edgee-menubar"
+cask "github@beta"
+cask "rectangle"
+cask "telegram"

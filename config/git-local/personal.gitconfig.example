@@ -1,0 +1,7 @@
+# Copy to ~/.config/git-local/personal.gitconfig. Personal commits are unsigned.
+[user]
+	name = Andrea Benato
+	email = aabeborn@benato.dev
+
+[commit]
+	gpgsign = false

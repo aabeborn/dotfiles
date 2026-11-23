@@ -1,4 +1,4 @@
-# 🥟 Global bun packages. One package name per line. Read by install.sh and update.sh.
+# Global bun packages. One package name per line. Read by install.sh and update.sh.
 # Lines starting with # are comments.
 
 # ni, nr, nlx: use the right package manager

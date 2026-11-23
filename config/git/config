@@ -1,8 +1,15 @@
 # 🧰 Git behaviour. No identity, no secrets.
-# Identity and per-folder profiles live outside the repo, in ~/.config/git-local/identity.gitconfig.
+# Default identity is Qonto. Personal repos override it below.
+# Identity and signing live in ~/.config/git-local/ (not versioned).
 
 [include]
-	path = ~/.config/git-local/identity.gitconfig
+	path = ~/.config/git-local/qonto.gitconfig
+
+[includeIf "gitdir:~/aabeborn/"]
+	path = ~/.config/git-local/personal.gitconfig
+
+[includeIf "hasconfig:remote.*.url:https://github.com/aabeborn/**"]
+	path = ~/.config/git-local/personal.gitconfig
 
 [init]
 	defaultBranch = main

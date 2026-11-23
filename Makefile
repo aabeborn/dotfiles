@@ -15,6 +15,7 @@ update:
 
 bundle:
 	@brew bundle --file Brewfile
+	@[ "$(QONTO)" = 1 ] && brew bundle --file Brewfile.qonto || true
 
 status:
 	@./scripts/link.sh status
